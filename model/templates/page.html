@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>page all data</h1>
+    <table border="1">
+        <tr>
+            <th>page name</th>
+            <th>page category</th>
+            <th>publish date</th>
+            <th>created by</th> 
+        </tr>
+        {% for dt1 in data1 %}
+        <tr>
+            <td>{{dt1.page_name}}</td>
+            <td>{{dt1.page_cat}}</td>
+            <td>{{dt1.page_publish_date}}</td>
+            <td>{{dt1.user}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table><br>
+    <h1>page data filltered by page category</h1>
+    <table border="1">
+        <tr>
+            <th>page name</th>
+            <th>page category</th>
+            <th>publish date</th>
+            <th>created by</th>
+             
+        </tr>
+        {% for dt2 in data2 %}
+        <tr>
+            <td>{{dt2.page_name}}</td>
+            <td>{{dt2.page_cat}}</td>
+            <td>{{dt2.page_publish_date}}</td>
+            <td>{{dt2.user}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table><br>
+    <h1>page data filltered by email</h1>
+    <table border="1">
+        <tr>
+            <th>page name</th>
+            <th>page category</th>
+            <th>publish date</th>
+            <th>created by</th>
+           
+        </tr>
+        {% for dt3 in data3 %}
+        <tr>
+            <td>{{dt3.page_name}}</td>
+            <td>{{dt3.page_cat}}</td>
+            <td>{{dt3.page_publish_date}}</td>
+            <td>{{dt3.user}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp form</title>
+</head>
+<body>
+    {% for i in messages %}
+    {{i}}
+    {% endfor %}
+    <h1>please SignUp</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="">Name:</label><br>
+            <input type="text" name="name">
+        </div>
+        <br>
+        <div>
+            <label for="">Email Id:</label><br>
+            <input type="email" name="email">
+        </div>
+        <br>
+        <div>
+            <label for="">password:</label><br>
+            <input type="text" name="pass1">
+        </div>
+        <br>
+        <div>
+            <label for="">conform password:</label><br>
+            <input type="text" name="pass2">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="SignUp">
+        </div>
+    </form>
+    <br>
+    <a href="/login/"><button>Login</button></a><br><br>
+    <a href="/page/"><button>Create Page</button></a><br><br>
+    <a href="/post/"><button>Create post</button></a><br><br>
+    <a href="/song/"><button>Create song</button></a><br><br>
+    <a href="/show_user_data/"><button>show all user detail</button></a><br><br>
+    <a href="/show_page_data/"><button>show all page detail</button></a><br><br>
+    <a href="/show_post_data/"><button>show all post detail</button></a><br><br>
+    <a href="/show_song_data/"><button>show all song detail</button></a><br><br>
+
+</body>
+</html>
